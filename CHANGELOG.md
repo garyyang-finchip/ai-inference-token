@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.1 (2026-11-20)
+
+- Specification revision 1, after the first discussion question: section 5.3 states that a claim is public from the moment it is recorded; section 5.4 states when the objection window starts, that an objection needs no evidence, how unavailable evidence is treated, and what optimistic acceptance settles when nobody objects; a matching Security Considerations paragraph. No interface or contract change; the reference ledger already refuses an optimistic series with a zero objection window.
+
 ## 0.2.0 (2026-11-20)
 
 - Sepolia evidence run: both worked cases executed in 33 transactions; `deployments/sepolia/evidence.json`, `docs/sepolia-evidence.md`, README deployments table.
