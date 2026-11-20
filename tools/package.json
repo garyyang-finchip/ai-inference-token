@@ -1,0 +1,16 @@
+{
+  "name": "aito-tools",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Record identifiers, schema checks and test vectors for AI Inference Token Onchain",
+  "license": "CC0-1.0",
+  "scripts": {
+    "check": "node aito.mjs check",
+    "vectors": "node aito.mjs vectors"
+  },
+  "dependencies": {
+    "ajv": "8.17.1",
+    "ethers": "6.13.5"
+  }
+}

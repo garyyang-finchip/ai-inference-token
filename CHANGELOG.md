@@ -1,0 +1,12 @@
+# Changelog
+
+## 0.1.0 (2026-11-20)
+
+First package.
+
+- Specification draft `ERCS/erc-9999.md` with placeholder number: five core objects, three optional modules, series, authorized consumption with hold, settlement and release, native ERC-1155 binding, ERC-20 wrapper, periodic allowance and reserved capacity profiles as critical extensions, eleven invariants.
+- Reference implementation: `AITOLedger` (core, stock quota, native ERC-1155 binding), `AITOWrapper20`, `AITORecords`. The two optional profiles are specified and not implemented.
+- 98 Foundry tests: series, consumption, wrapper, records, four worked cases, invariants, vectors.
+- JSON Schemas of the eight record kinds, example records, vectors from an independent implementation (`tools/aito.mjs`), model of the two profile state examples (`tools/profile_examples.py`).
+- Evidence run for a live network (`script/AITOEvidence.s.sol`, `scripts/evidence-run.sh`) and the plan for Sepolia.
+- Filing package builder with consistency checks (`scripts/make-filing-package.py`), filing and Sepolia runbooks, discussion post draft, design note on pooling.
