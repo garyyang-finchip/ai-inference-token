@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.1 (2026-11-20)
+
+- `discussions-to` set to Ethereum Magicians topic 30453.
+- Repository name corrected to `ai-inference-token` in the Sepolia plan record locations, the record tool, the runbooks and the discussion post.
+- Opening sentence of the discussion post reworded.
+
 ## 0.1.0 (2026-11-20)
 
 First package.

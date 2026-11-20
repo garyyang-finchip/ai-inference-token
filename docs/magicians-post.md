@@ -2,6 +2,8 @@
 
 Category: ERCs
 
+Posted as topic 30453: https://ethereum-magicians.org/t/draft-erc-ai-inference-token-onchain-aito-consumable-entitlements-to-ai-inference-supply-with-metering-authorized-consumption-and-settlement/30453
+
 Title:
 
 ```text
@@ -14,7 +16,7 @@ Body, everything below the line:
 
 ---
 
-I would like to open discussion on a draft ERC, **AI Inference Token Onchain (AITO)**.
+This topic is the discussion thread for a draft ERC, **AI Inference Token Onchain (AITO)**.
 
 ## Summary
 
@@ -53,7 +55,7 @@ Prices, market making, indices, cash-settled derivatives, proof systems for infe
 
 Repository:
 
-https://github.com/garyyang-finchip/ai-inference-token-onchain
+https://github.com/garyyang-finchip/ai-inference-token
 
 - `AITOLedger` (core and native ERC-1155 binding), `AITOWrapper20` and `AITORecords`, with no owner, no upgrade path and no privileged account.
 - 98 Foundry tests: unit tests, two worked cases end to end, fuzz tests and invariant tests.

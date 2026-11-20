@@ -21,9 +21,9 @@ The script refuses to write the package when an interface quoted in the specific
 
 ## Order of steps
 
-1. **Repository.** Create `ai-inference-token-onchain` on GitHub and upload this repository. The package has no dotfiles in subdirectories. Shell and Python scripts are run as `bash scripts/<name>.sh` and `python3 scripts/<name>.py`, so they need no executable bit.
-2. **Discussion topic.** Post the text of [magicians-post.md](magicians-post.md) on Ethereum Magicians in the category ERCs. Note the link of the topic.
-3. **Discussion link.** Put the link into the specification, either by running `python3 scripts/make-filing-package.py --discussions-to <link>` and using the regenerated `ercs-pr-package/ERCS/erc-9999.md`, or by editing the `discussions-to` line by hand. Change the same line in `ERCS/erc-9999.md` of this repository.
+1. **Repository.** The repository is `github.com/garyyang-finchip/ai-inference-token`. The package has no dotfiles in subdirectories. Shell and Python scripts are run as `bash scripts/<name>.sh` and `python3 scripts/<name>.py`, so they need no executable bit.
+2. **Discussion topic.** The topic is open on Ethereum Magicians in the category ERCs; its text is [magicians-post.md](magicians-post.md).
+3. **Discussion link.** The `discussions-to` line of the specification carries the topic link. A new topic would be set with `python3 scripts/make-filing-package.py --discussions-to <link>`.
 4. **Branch.** In your fork of `ethereum/ERCs`, bring `master` up to date with upstream (Sync fork), then create the branch `add-erc-ai-inference-token-onchain` from `master`.
 5. **Upload.** In that branch choose Add file, Upload files, and drop the two folders `ERCS` and `assets` from `ercs-pr-package/`. Commit to the branch with the message `Add ERC: AI Inference Token Onchain`.
 6. **Pull request.** Open a pull request from the branch to `ethereum/ERCs` `master`.
@@ -45,7 +45,7 @@ The script refuses to write the package when an interface quoted in the specific
       kinds, example records and test vectors
     - Discussion: <link of the topic>
     - Reference repository with tests:
-      https://github.com/garyyang-finchip/ai-inference-token-onchain
+      https://github.com/garyyang-finchip/ai-inference-token
     ```
 
 7. **Checks.** The pull request runs the ERCs validator, the Markdown linter, the spell checker and the link checker. The specification passes the first three locally with the configuration of the ERCs repository; the link checker needs the pull request itself.

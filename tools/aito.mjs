@@ -842,7 +842,7 @@ function cmdCheck() {
 }
 
 const [command, argument, extra] = process.argv.slice(2);
-const DEFAULT_BASE_URI = "https://raw.githubusercontent.com/garyyang-finchip/ai-inference-token-onchain/main/";
+const DEFAULT_BASE_URI = "https://raw.githubusercontent.com/garyyang-finchip/ai-inference-token/main/";
 if (command === "id") console.log(recordId(readJson(argument)));
 else if (command === "plan") cmdPlan(argument ?? "anvil", extra ?? DEFAULT_BASE_URI);
 else if (command === "examples") cmdExamples();

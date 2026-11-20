@@ -10,6 +10,7 @@ AITO fixes no price, no conversion rate between suppliers and no ranking of qual
 | --- | --- |
 | Status | Draft, version 0.1.0 |
 | Specification | [ERCS/erc-9999.md](ERCS/erc-9999.md) (placeholder number until one is assigned) |
+| Discussion | [Ethereum Magicians topic 30453](https://ethereum-magicians.org/t/draft-erc-ai-inference-token-onchain-aito-consumable-entitlements-to-ai-inference-supply-with-metering-authorized-consumption-and-settlement/30453) |
 | Requires | ERC-20, ERC-165, EIP-712, ERC-1155, ERC-1271 |
 | Author | Gary Yang ([@garyyang-finchip](https://github.com/garyyang-finchip)) |
 | License | CC0-1.0 |
@@ -121,7 +122,7 @@ The plan of the Sepolia run, with its accounts, records and series, is in [deplo
 
 ## Links
 
-- Discussion: to be added
+- Discussion: https://ethereum-magicians.org/t/draft-erc-ai-inference-token-onchain-aito-consumable-entitlements-to-ai-inference-supply-with-metering-authorized-consumption-and-settlement/30453
 - ERCs pull request: to be added
 
 ## License

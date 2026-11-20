@@ -60,8 +60,8 @@ The record documents of the run are served from this repository under `deploymen
 Requires Foundry (forge and cast, 1.7.1 or later) and git. Node is not needed for the run. The driver builds the contracts and the script without the test files, which takes about 300 MB of memory.
 
 ```sh
-git clone https://github.com/garyyang-finchip/ai-inference-token-onchain.git
-cd ai-inference-token-onchain
+git clone https://github.com/garyyang-finchip/ai-inference-token.git
+cd ai-inference-token
 forge --version
 bash scripts/setup.sh
 ```
