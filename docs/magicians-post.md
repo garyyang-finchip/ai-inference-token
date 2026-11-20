@@ -64,7 +64,7 @@ https://github.com/garyyang-finchip/ai-inference-token
 
 A Sepolia deployment with both worked cases executed will be added to this topic.
 
-Pull request: to be added.
+Pull request: https://github.com/ethereum/ERCs/pull/2188
 
 ## Questions I would like feedback on
 

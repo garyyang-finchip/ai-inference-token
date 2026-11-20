@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.2 (2026-11-20)
+
+- Pull request ethereum/ERCs#2188 linked from the README, the discussion post and the filing runbook.
+
 ## 0.1.1 (2026-11-20)
 
 - `discussions-to` set to Ethereum Magicians topic 30453.

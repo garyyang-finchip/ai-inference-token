@@ -26,7 +26,7 @@ The script refuses to write the package when an interface quoted in the specific
 3. **Discussion link.** The `discussions-to` line of the specification carries the topic link. A new topic would be set with `python3 scripts/make-filing-package.py --discussions-to <link>`.
 4. **Branch.** In your fork of `ethereum/ERCs`, bring `master` up to date with upstream (Sync fork), then create the branch `add-erc-ai-inference-token-onchain` from `master`.
 5. **Upload.** In that branch choose Add file, Upload files, and drop the two folders `ERCS` and `assets` from `ercs-pr-package/`. Commit to the branch with the message `Add ERC: AI Inference Token Onchain`.
-6. **Pull request.** Open a pull request from the branch to `ethereum/ERCs` `master`.
+6. **Pull request.** Open a pull request from the branch to `ethereum/ERCs` `master`. Filed as https://github.com/ethereum/ERCs/pull/2188 from the branch `add-erc-ai-token`.
 
     Title:
 
