@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.2.0 (2026-11-20)
+
+- Sepolia evidence run: both worked cases executed in 33 transactions; `deployments/sepolia/evidence.json`, `docs/sepolia-evidence.md`, README deployments table.
+- Runbook commits `evidence.json` only.
+
 ## 0.1.2 (2026-11-20)
 
 - Pull request ethereum/ERCs#2188 linked from the README, the discussion post and the filing runbook.

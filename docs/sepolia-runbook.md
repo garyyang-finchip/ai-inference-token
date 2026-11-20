@@ -1,4 +1,6 @@
-# Sepolia evidence run
+# Sepolia evidence run: how it is made
+
+The run of 2026-11-20 and its results are in [sepolia-evidence.md](sepolia-evidence.md). This page describes the procedure.
 
 The run deploys the reference implementation and executes the two worked cases of the specification on Sepolia. It ends by reading the final state back, checking it against the numbers in the specification, and writing `deployments/sepolia/evidence.json`.
 
@@ -33,7 +35,7 @@ Every account of the run is derived from the deployer key, so only one account i
 
 The deployer key is not in this repository. It is a throwaway key for this test network only.
 
-If the deployer has sent no transaction before and the first run completes, the contracts land at:
+The first run from this deployer landed the contracts at:
 
 | Contract | Address |
 | --- | --- |
@@ -97,6 +99,6 @@ The run takes about fifteen minutes. It prints the phases as they go and, at the
 
 ## After the run
 
-1. Keep the printed evidence block and commit `deployments/sepolia/evidence.json` and `deployments/sepolia/state.json`.
+1. Keep the printed evidence block and commit it as `deployments/sepolia/evidence.json`.
 2. The README deployments table and the discussion topic are updated with the addresses.
 3. Optional: verify the three contracts on a block explorer. The compiler settings are in `foundry.toml` (solc 0.8.28, optimizer 200 runs, `via_ir`, EVM version cancun, no metadata hash).

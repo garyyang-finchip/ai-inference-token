@@ -62,7 +62,12 @@ https://github.com/garyyang-finchip/ai-inference-token
 - JSON Schemas for the eight record kinds, example records, and vectors produced by a second implementation outside Solidity and replayed against the contracts.
 - The two optional profiles are specified only. The reference ledger does not implement them and does not report them.
 
-A Sepolia deployment with both worked cases executed will be added to this topic.
+Sepolia deployment, 2026-11-20, with both worked cases executed (33 transactions, blocks 12172538 to 12172585; every final figure matched the specification):
+
+- AITORecords: https://eth-sepolia.blockscout.com/address/0x7863F072581A96C3E147b7e366299EAc49D6E726
+- AITOLedger: https://eth-sepolia.blockscout.com/address/0xF6c40A9821a8105e550d695B153b64c34b2f89Ca
+- AITOWrapper20 (Case A): https://eth-sepolia.blockscout.com/address/0xb3428103825aDDE885036ab01c84a85E9a4bAE01
+- Transactions and read-back state: https://github.com/garyyang-finchip/ai-inference-token/blob/main/docs/sepolia-evidence.md
 
 Pull request: https://github.com/ethereum/ERCs/pull/2188
 

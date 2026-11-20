@@ -1,0 +1,38 @@
+{
+  "caseA": {
+    "claimHash": "0xab2052c9c15ac9a7148413b4e825ad783849e8d5da405f3230fd92bd229d75c6",
+    "consumed": 3600,
+    "deducted": 3600,
+    "distributorUnits": 700000,
+    "held": 4000,
+    "holder2Units": 46400,
+    "holderUnits": 100000,
+    "issued": 1000000,
+    "receiptHash": "0xf7dce22b4219c61a930fae6fdc4bdd30c800dbe7b74c40baeecc8d7d19deafea",
+    "released": 400,
+    "requestKey": "0x89d56ece6fd79bea33b4b324a45a4d51d9432364edd739ba3950fb50c91dfd54",
+    "seriesId": "104988703122718899260027361577734604713472584840211381413739369746824001066999",
+    "wrapper": "0xb3428103825aDDE885036ab01c84a85E9a4bAE01",
+    "wrapperLockedUnits": 150000
+  },
+  "caseB": {
+    "alphaUnits": 800000,
+    "authorizationUsed": 1800,
+    "betaUnits": 198200,
+    "claimHash": "0x8b8575fb9ee4cc32063dbacd657fef2380978f6a116a1afdf52a83c3eb40c5a4",
+    "consumed": 1800,
+    "deducted": 1800,
+    "held": 3000,
+    "issued": 1000000,
+    "receiptHash": "0x73ea5ad7996fa61e1170be7f0d1e8cf2872ad74aa0cbf86952b40b2f8b52320c",
+    "released": 1200,
+    "requestKey": "0x95f06e9ac957405b8c1d6793e83bdb9f674b07597ebf851e0d10183ac192a913",
+    "seriesId": "81650611723194763811685161692926060662183475595777751734324204059072809973110"
+  },
+  "chainId": 11155111,
+  "deployer": "0x745a127396A148865A0d54e5bA4fc0c2C35C48aC",
+  "ledger": "0xF6c40A9821a8105e550d695B153b64c34b2f89Ca",
+  "network": "sepolia",
+  "readAtBlock": 12172585,
+  "records": "0x7863F072581A96C3E147b7e366299EAc49D6E726"
+}

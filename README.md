@@ -83,7 +83,7 @@ Both are tests (`test/AITOCases.t.sol`) and both are what the evidence run execu
 
 ## Gas
 
-Measured on a local node, once with the gas rules in force before the Glamsterdam repricing and once with state creation priced at 1,530 gas per byte (EIP-8037, the pricing Sepolia has used since that upgrade).
+Measured on a local node, once with the gas rules in force before the Glamsterdam repricing and once with state creation priced at 1,530 gas per byte (EIP-8037, the pricing Sepolia has used since that upgrade). The Sepolia run of 2026-11-20 charged the same figures within a few hundred gas per transaction; the ledger deployment cost exactly 33,980,594.
 
 | Operation | Before the repricing | With state-creation pricing |
 | --- | --- | --- |
@@ -107,16 +107,21 @@ One request (hold, claim, settlement) is about 630,000 gas before the repricing 
 
 ## Deployments
 
-| Network | Records | Ledger | Evidence |
-| --- | --- | --- | --- |
-| Sepolia | pending | pending | pending |
+| Network | Contract | Address |
+| --- | --- | --- |
+| Sepolia | AITORecords | [`0x7863F072581A96C3E147b7e366299EAc49D6E726`](https://eth-sepolia.blockscout.com/address/0x7863F072581A96C3E147b7e366299EAc49D6E726) |
+| Sepolia | AITOLedger | [`0xF6c40A9821a8105e550d695B153b64c34b2f89Ca`](https://eth-sepolia.blockscout.com/address/0xF6c40A9821a8105e550d695B153b64c34b2f89Ca) |
+| Sepolia | AITOWrapper20 (series A) | [`0xb3428103825aDDE885036ab01c84a85E9a4bAE01`](https://eth-sepolia.blockscout.com/address/0xb3428103825aDDE885036ab01c84a85E9a4bAE01) |
 
-The plan of the Sepolia run, with its accounts, records and series, is in [deployments/sepolia](deployments/sepolia). See [docs/sepolia-runbook.md](docs/sepolia-runbook.md).
+Both worked cases were executed on Sepolia on 2026-11-20 in 33 transactions (blocks 12172538 to 12172585); every final figure matched the specification. Transactions, hashes and the read-back state are in [docs/sepolia-evidence.md](docs/sepolia-evidence.md) and [deployments/sepolia/evidence.json](deployments/sepolia/evidence.json).
+
+The plan of the run, with its accounts, records and series, is in [deployments/sepolia](deployments/sepolia); how to repeat it is in [docs/sepolia-runbook.md](docs/sepolia-runbook.md).
 
 ## Documents
 
 - [docs/filing-runbook.md](docs/filing-runbook.md): how the specification is filed with the ERCs repository
-- [docs/sepolia-runbook.md](docs/sepolia-runbook.md): the on-chain evidence run
+- [docs/sepolia-runbook.md](docs/sepolia-runbook.md): how the on-chain evidence run is made
+- [docs/sepolia-evidence.md](docs/sepolia-evidence.md): the Sepolia run of 2026-11-20
 - [docs/magicians-post.md](docs/magicians-post.md): text of the discussion topic
 - [docs/redemption-pool-design-note.md](docs/redemption-pool-design-note.md): pooling of several suppliers, deferred
 - [CHANGELOG.md](CHANGELOG.md)
