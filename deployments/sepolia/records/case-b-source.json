@@ -1,0 +1,33 @@
+{
+  "aito": "1",
+  "kind": "source",
+  "name": "Agent alpha, own hardware",
+  "issuer": "eip155:11155111:0x41BB1EfE9B83060407BC5082712c2107791EEB4f",
+  "responsibleParty": "eip155:11155111:0x41BB1EfE9B83060407BC5082712c2107791EEB4f",
+  "fulfillers": [
+    "eip155:11155111:0x41BB1EfE9B83060407BC5082712c2107791EEB4f"
+  ],
+  "issuanceBases": [
+    {
+      "id": "alpha-own-hardware",
+      "origin": "own-capacity",
+      "description": "A single machine operated by agent alpha.",
+      "issuanceRight": "issuer",
+      "supplyObligation": "responsible-party",
+      "authorization": "not-applicable",
+      "quantityBound": "5000000",
+      "timeBound": {
+        "notBefore": "2026-11-19T00:00:00Z",
+        "notAfter": "2026-12-19T00:00:00Z"
+      },
+      "doubleIssuanceControl": "This basis is cited by one series only.",
+      "backing": "none"
+    }
+  ],
+  "capacity": {
+    "mode": "best-effort",
+    "total": "5000000"
+  },
+  "exclusivity": "undeclared",
+  "collateral": "none"
+}

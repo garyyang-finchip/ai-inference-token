@@ -1,0 +1,114 @@
+{
+  "network": "sepolia",
+  "chainId": 11155111,
+  "deployer": "0x745a127396A148865A0d54e5bA4fc0c2C35C48aC",
+  "validFrom": "2026-11-19T00:00:00Z",
+  "actors": {
+    "supplier": "0x5154bd2f129b9c4500964edE47696CAF05Ef3106",
+    "distributor": "0xaeE302e28750a8D978F4B75b308E77BAfBA06b9e",
+    "holder": "0xcEc7648a5567A5fA32117693439dd864293622dd",
+    "holder2": "0x1d05393b791Fe05cf289401cc47ccd946E9Dc37C",
+    "consumer": "0x9b5219392E78fcac788E3757458255FDCc86cCc2",
+    "alpha": "0x41BB1EfE9B83060407BC5082712c2107791EEB4f",
+    "beta": "0x054f08d3128B5Ba17Ed0e09BB5e831c0F05CA9c8",
+    "gamma": "0x33A0bb457222204c9bA06b9D92755ADbc1a97AEd"
+  },
+  "caseA": {
+    "unit": "0xa96f1bc7480d72951dd26dd0e30c1b6edbc4cc237397beb5418c4e176190dfcc",
+    "grade": "0x93dcf8df52a1e7c400907a278ac86d809a07052115f14dea5d39c530f0bec2e3",
+    "source": "0xfa3ef546989106029c664c98017c4e2ed3e311265c98619cc16fae042ea8a110",
+    "termsHash": "0x598904f2e37e32de45cb033c481b89ae8c70a74c9e85f1df8d475f3d2fe1c99b",
+    "unitURI": "https://raw.githubusercontent.com/garyyang-finchip/ai-inference-token-onchain/main/deployments/sepolia/records/case-a-unit.json",
+    "gradeURI": "https://raw.githubusercontent.com/garyyang-finchip/ai-inference-token-onchain/main/deployments/sepolia/records/case-a-grade.json",
+    "sourceURI": "https://raw.githubusercontent.com/garyyang-finchip/ai-inference-token-onchain/main/deployments/sepolia/records/case-a-source.json",
+    "termsURI": "https://raw.githubusercontent.com/garyyang-finchip/ai-inference-token-onchain/main/deployments/sepolia/records/case-a-terms.json",
+    "basisRef": "0x0947b0c44b86e5d8b41ee0b95168fd633504246867e3c45993dcb81016391433",
+    "terms": {
+      "issuer": "0x5154bd2f129b9c4500964edE47696CAF05Ef3106",
+      "responsibleParty": "0x5154bd2f129b9c4500964edE47696CAF05Ef3106",
+      "unit": "0xa96f1bc7480d72951dd26dd0e30c1b6edbc4cc237397beb5418c4e176190dfcc",
+      "grade": "0x93dcf8df52a1e7c400907a278ac86d809a07052115f14dea5d39c530f0bec2e3",
+      "source": "0xfa3ef546989106029c664c98017c4e2ed3e311265c98619cc16fae042ea8a110",
+      "termsHash": "0x598904f2e37e32de45cb033c481b89ae8c70a74c9e85f1df8d475f3d2fe1c99b",
+      "cap": "10000000",
+      "validFrom": "1795046400",
+      "validUntil": "1802822400",
+      "transferable": true,
+      "scheduleMutable": false,
+      "roundUp": true,
+      "acceptanceRule": 1,
+      "objectionWindow": 120,
+      "resolutionWindow": 0,
+      "maxHoldDuration": 3600,
+      "resolver": "0x0000000000000000000000000000000000000000",
+      "components": [
+        "0x696e707574000000000000000000000000000000000000000000000000000000",
+        "0x6f75747075740000000000000000000000000000000000000000000000000000",
+        "0x63616368655f7265616400000000000000000000000000000000000000000000"
+      ],
+      "weights": [
+        "250000",
+        "1000000",
+        "25000"
+      ],
+      "outcomeMasks": [
+        "7",
+        "7",
+        "1",
+        "0",
+        "7",
+        "0"
+      ],
+      "extensions": []
+    },
+    "seriesId": "104988703122718899260027361577734604713472584840211381413739369746824001066999"
+  },
+  "caseB": {
+    "unit": "0x79fbb79521870a1df8ea1d15a36523fb9546b98740b9a21ef0bb41e80c69aa24",
+    "grade": "0xb7f663a9a4e45e63a3d3f4091a8cce9e41241ddd7c1dec0caf05c53cf675b939",
+    "source": "0x48ba80ebb0c4e3511511383b8379cfa6a687d60913cf5d40e618501a51aa176d",
+    "termsHash": "0x34b26f99bf2c16d87651789ec1db19fdc5a9205ad339f401e50fdacbb7a3725b",
+    "unitURI": "https://raw.githubusercontent.com/garyyang-finchip/ai-inference-token-onchain/main/deployments/sepolia/records/case-b-unit.json",
+    "gradeURI": "https://raw.githubusercontent.com/garyyang-finchip/ai-inference-token-onchain/main/deployments/sepolia/records/case-b-grade.json",
+    "sourceURI": "https://raw.githubusercontent.com/garyyang-finchip/ai-inference-token-onchain/main/deployments/sepolia/records/case-b-source.json",
+    "termsURI": "https://raw.githubusercontent.com/garyyang-finchip/ai-inference-token-onchain/main/deployments/sepolia/records/case-b-terms.json",
+    "basisRef": "0x7dd47d3e7da49f7cbdb61c25878df26566b18fc769dc8c82a6586ffa9d3569c7",
+    "terms": {
+      "issuer": "0x41BB1EfE9B83060407BC5082712c2107791EEB4f",
+      "responsibleParty": "0x41BB1EfE9B83060407BC5082712c2107791EEB4f",
+      "unit": "0x79fbb79521870a1df8ea1d15a36523fb9546b98740b9a21ef0bb41e80c69aa24",
+      "grade": "0xb7f663a9a4e45e63a3d3f4091a8cce9e41241ddd7c1dec0caf05c53cf675b939",
+      "source": "0x48ba80ebb0c4e3511511383b8379cfa6a687d60913cf5d40e618501a51aa176d",
+      "termsHash": "0x34b26f99bf2c16d87651789ec1db19fdc5a9205ad339f401e50fdacbb7a3725b",
+      "cap": "5000000",
+      "validFrom": "1795046400",
+      "validUntil": "1797638400",
+      "transferable": true,
+      "scheduleMutable": false,
+      "roundUp": true,
+      "acceptanceRule": 1,
+      "objectionWindow": 120,
+      "resolutionWindow": 0,
+      "maxHoldDuration": 3600,
+      "resolver": "0x0000000000000000000000000000000000000000",
+      "components": [
+        "0x696e707574000000000000000000000000000000000000000000000000000000",
+        "0x6f75747075740000000000000000000000000000000000000000000000000000"
+      ],
+      "weights": [
+        "200000",
+        "1000000"
+      ],
+      "outcomeMasks": [
+        "3",
+        "3",
+        "1",
+        "0",
+        "3",
+        "0"
+      ],
+      "extensions": []
+    },
+    "seriesId": "81650611723194763811685161692926060662183475595777751734324204059072809973110"
+  }
+}
