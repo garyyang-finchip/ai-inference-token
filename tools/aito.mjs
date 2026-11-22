@@ -4,8 +4,8 @@
 // Record identifiers, schema checks and test vectors for AI Inference Token Onchain.
 //
 //   node aito.mjs id <record.json>     print the identifier of a record
-//   node aito.mjs examples             regenerate assets/erc-9999/examples
-//   node aito.mjs vectors              regenerate assets/erc-9999/vectors
+//   node aito.mjs examples             regenerate assets/erc-8506/examples
+//   node aito.mjs vectors              regenerate assets/erc-8506/vectors
 //   node aito.mjs check                validate examples against the schemas and the vectors
 //   node aito.mjs plan <network>       write the records and series of an evidence run (needs DEPLOYER_PK)
 //
@@ -19,7 +19,7 @@ import { AbiCoder, Interface, TypedDataEncoder, Wallet, SigningKey, keccak256, s
 import Ajv2020 from "ajv/dist/2020.js";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
-const ASSETS = join(ROOT, "assets", "erc-9999");
+const ASSETS = join(ROOT, "assets", "erc-8506");
 const EXAMPLES = join(ASSETS, "examples");
 const VECTORS = join(ASSETS, "vectors");
 const SCHEMAS = join(ASSETS, "schemas");

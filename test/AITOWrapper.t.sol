@@ -6,11 +6,11 @@ import {IERC165} from "@openzeppelin/contracts/utils/introspection/IERC165.sol";
 import {IERC1155Errors, IERC20Errors} from "@openzeppelin/contracts/interfaces/draft-IERC6093.sol";
 
 import {AITOBase, ExtensionLedger} from "./AITOBase.sol";
-import {AITOLedger} from "../assets/erc-9999/contracts/AITOLedger.sol";
-import {AITOWrapper20} from "../assets/erc-9999/contracts/AITOWrapper20.sol";
-import {AITORecords} from "../assets/erc-9999/contracts/AITORecords.sol";
-import {IAITOBinding} from "../assets/erc-9999/contracts/interfaces/IAITOBinding.sol";
-import {IAITOWrapper20} from "../assets/erc-9999/contracts/interfaces/IAITOWrapper20.sol";
+import {AITOLedger} from "../assets/erc-8506/contracts/AITOLedger.sol";
+import {AITOWrapper20} from "../assets/erc-8506/contracts/AITOWrapper20.sol";
+import {AITORecords} from "../assets/erc-8506/contracts/AITORecords.sol";
+import {IAITOBinding} from "../assets/erc-8506/contracts/interfaces/IAITOBinding.sol";
+import {IAITOWrapper20} from "../assets/erc-8506/contracts/interfaces/IAITOWrapper20.sol";
 import {
     SeriesTerms,
     SeriesExtension,
@@ -19,7 +19,7 @@ import {
     Outcome,
     BindingType,
     ConsumptionPath
-} from "../assets/erc-9999/contracts/interfaces/AITOTypes.sol";
+} from "../assets/erc-8506/contracts/interfaces/AITOTypes.sol";
 
 contract AITOWrapperTest is AITOBase {
     uint256 internal seriesId;

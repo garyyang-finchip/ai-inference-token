@@ -6,9 +6,9 @@ import {IERC1271} from "@openzeppelin/contracts/interfaces/IERC1271.sol";
 import {ECDSA} from "@openzeppelin/contracts/utils/cryptography/ECDSA.sol";
 import {ERC1155Holder} from "@openzeppelin/contracts/token/ERC1155/utils/ERC1155Holder.sol";
 
-import {AITOLedger} from "../assets/erc-9999/contracts/AITOLedger.sol";
-import {AITORecords} from "../assets/erc-9999/contracts/AITORecords.sol";
-import {AITOWrapper20} from "../assets/erc-9999/contracts/AITOWrapper20.sol";
+import {AITOLedger} from "../assets/erc-8506/contracts/AITOLedger.sol";
+import {AITORecords} from "../assets/erc-8506/contracts/AITORecords.sol";
+import {AITOWrapper20} from "../assets/erc-8506/contracts/AITOWrapper20.sol";
 import {
     SeriesTerms,
     SeriesExtension,
@@ -18,7 +18,7 @@ import {
     RequestState,
     Outcome,
     AcceptanceRule
-} from "../assets/erc-9999/contracts/interfaces/AITOTypes.sol";
+} from "../assets/erc-8506/contracts/interfaces/AITOTypes.sol";
 
 /// @dev A contract account that validates signatures of one owner key (ERC-1271).
 contract SmartAccount is IERC1271, ERC1155Holder {

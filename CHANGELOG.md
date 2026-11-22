@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.3.0 (2026-11-22)
+
+- Number assigned: ERC-8506. `ERCS/erc-9999.md` becomes `ERCS/erc-8506.md`, `assets/erc-9999/` becomes `assets/erc-8506/`, and every path that referred to them follows (specification links, schema identifiers, tests, scripts, tools, README, runbooks). Record identifiers, series identifiers and vectors are unchanged, so the Sepolia evidence stays valid.
+- Discussion topic retitled to ERC-8506.
+
 ## 0.2.1 (2026-11-20)
 
 - Specification revision 1, after the first discussion question: section 5.3 states that a claim is public from the moment it is recorded; section 5.4 states when the objection window starts, that an objection needs no evidence, how unavailable evidence is treated, and what optimistic acceptance settles when nobody objects; a matching Security Considerations paragraph. No interface or contract change; the reference ledger already refuses an optimistic series with a zero objection window.

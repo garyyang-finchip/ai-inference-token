@@ -7,10 +7,10 @@ import {IERC165} from "@openzeppelin/contracts/utils/introspection/IERC165.sol";
 import {IERC1155Errors} from "@openzeppelin/contracts/interfaces/draft-IERC6093.sol";
 
 import {AITOBase, ExtensionLedger} from "./AITOBase.sol";
-import {AITOLedger} from "../assets/erc-9999/contracts/AITOLedger.sol";
-import {IAITOInstrument} from "../assets/erc-9999/contracts/interfaces/IAITOInstrument.sol";
-import {IAITOConsumption} from "../assets/erc-9999/contracts/interfaces/IAITOConsumption.sol";
-import {IAITOBinding} from "../assets/erc-9999/contracts/interfaces/IAITOBinding.sol";
+import {AITOLedger} from "../assets/erc-8506/contracts/AITOLedger.sol";
+import {IAITOInstrument} from "../assets/erc-8506/contracts/interfaces/IAITOInstrument.sol";
+import {IAITOConsumption} from "../assets/erc-8506/contracts/interfaces/IAITOConsumption.sol";
+import {IAITOBinding} from "../assets/erc-8506/contracts/interfaces/IAITOBinding.sol";
 import {
     SeriesTerms,
     SeriesExtension,
@@ -18,7 +18,7 @@ import {
     AcceptanceRule,
     BindingType,
     ConsumptionPath
-} from "../assets/erc-9999/contracts/interfaces/AITOTypes.sol";
+} from "../assets/erc-8506/contracts/interfaces/AITOTypes.sol";
 
 contract AITOSeriesTest is AITOBase {
     // ---------------------------------------------------------------- creation

@@ -4,8 +4,8 @@ pragma solidity ^0.8.24;
 import {IERC1155Errors} from "@openzeppelin/contracts/interfaces/draft-IERC6093.sol";
 
 import {AITOBase, SmartAccount} from "./AITOBase.sol";
-import {AITOLedger} from "../assets/erc-9999/contracts/AITOLedger.sol";
-import {IAITOConsumption} from "../assets/erc-9999/contracts/interfaces/IAITOConsumption.sol";
+import {AITOLedger} from "../assets/erc-8506/contracts/AITOLedger.sol";
+import {IAITOConsumption} from "../assets/erc-8506/contracts/interfaces/IAITOConsumption.sol";
 import {
     SeriesTerms,
     Authorization,
@@ -14,7 +14,7 @@ import {
     RequestState,
     Outcome,
     AcceptanceRule
-} from "../assets/erc-9999/contracts/interfaces/AITOTypes.sol";
+} from "../assets/erc-8506/contracts/interfaces/AITOTypes.sol";
 
 contract AITOConsumptionTest is AITOBase {
     uint256 internal seriesId;

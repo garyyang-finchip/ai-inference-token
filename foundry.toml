@@ -1,5 +1,5 @@
 [profile.default]
-src = "assets/erc-9999/contracts"
+src = "assets/erc-8506/contracts"
 test = "test"
 script = "script"
 out = "out"

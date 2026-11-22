@@ -8,10 +8,10 @@ AITO fixes no price, no conversion rate between suppliers and no ranking of qual
 
 | | |
 | --- | --- |
-| Status | Draft, version 0.1.0 |
-| Specification | [ERCS/erc-9999.md](ERCS/erc-9999.md) (placeholder number until one is assigned) |
+| Status | ERC-8506, Draft; repository version 0.3.0 |
+| Specification | [ERCS/erc-8506.md](ERCS/erc-8506.md); once merged, https://eips.ethereum.org/EIPS/eip-8506 |
 | Pull request | [ethereum/ERCs#2188](https://github.com/ethereum/ERCs/pull/2188) |
-| Discussion | [Ethereum Magicians topic 30453](https://ethereum-magicians.org/t/draft-erc-ai-inference-token-onchain-aito-consumable-entitlements-to-ai-inference-supply-with-metering-authorized-consumption-and-settlement/30453) |
+| Discussion | [Ethereum Magicians topic 30453](https://ethereum-magicians.org/t/erc-8506-ai-inference-token-onchain-aito/30453) |
 | Requires | ERC-20, ERC-165, EIP-712, ERC-1155, ERC-1271 |
 | Author | Gary Yang ([@garyyang-finchip](https://github.com/garyyang-finchip)) |
 | License | CC0-1.0 |
@@ -31,12 +31,12 @@ Out of scope: prices, market making, indices, cash-settled derivatives, proof sy
 
 | Path | Content |
 | --- | --- |
-| `ERCS/erc-9999.md` | The specification |
-| `assets/erc-9999/contracts/interfaces/` | Types and the interfaces `IAITORecords`, `IAITOInstrument`, `IAITOConsumption`, `IAITOBinding`, `IAITOWrapper20`, `IAITOPeriodic` |
-| `assets/erc-9999/contracts/` | Reference implementation: `AITOLedger` (core and native ERC-1155 binding), `AITORecords`, `AITOWrapper20` |
-| `assets/erc-9999/schemas/` | JSON Schemas of the eight record kinds |
-| `assets/erc-9999/examples/` | Records of the worked cases |
-| `assets/erc-9999/vectors/` | Record identifiers, series identifiers, typed-data digests and signatures, interface identifiers |
+| `ERCS/erc-8506.md` | The specification |
+| `assets/erc-8506/contracts/interfaces/` | Types and the interfaces `IAITORecords`, `IAITOInstrument`, `IAITOConsumption`, `IAITOBinding`, `IAITOWrapper20`, `IAITOPeriodic` |
+| `assets/erc-8506/contracts/` | Reference implementation: `AITOLedger` (core and native ERC-1155 binding), `AITORecords`, `AITOWrapper20` |
+| `assets/erc-8506/schemas/` | JSON Schemas of the eight record kinds |
+| `assets/erc-8506/examples/` | Records of the worked cases |
+| `assets/erc-8506/vectors/` | Record identifiers, series identifiers, typed-data digests and signatures, interface identifiers |
 | `test/` | Foundry tests, including the worked cases, invariants and the vectors |
 | `script/`, `scripts/` | The on-chain evidence run and its driver, library setup, filing package builder |
 | `tools/` | Record identifiers, schema checks and vector generation (Node), and the model of the two profile examples (Python) |
@@ -128,7 +128,7 @@ The plan of the run, with its accounts, records and series, is in [deployments/s
 
 ## Links
 
-- Discussion: https://ethereum-magicians.org/t/draft-erc-ai-inference-token-onchain-aito-consumable-entitlements-to-ai-inference-supply-with-metering-authorized-consumption-and-settlement/30453
+- Discussion: https://ethereum-magicians.org/t/erc-8506-ai-inference-token-onchain-aito/30453
 - ERCs pull request: https://github.com/ethereum/ERCs/pull/2188
 
 ## License

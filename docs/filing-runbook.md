@@ -1,6 +1,6 @@
 # Filing with the ERCs repository
 
-The specification is filed as a pull request against `ethereum/ERCs`. The pull request contains the specification and its assets and nothing else. Until an editor assigns a number, the files carry the placeholder number 9999.
+The specification is filed as a pull request against `ethereum/ERCs`. The pull request contains the specification and its assets and nothing else. The number ERC-8506 was assigned on 2026-11-21 in the review of the pull request; the files carry it.
 
 ## What is filed
 
@@ -8,12 +8,12 @@ The specification is filed as a pull request against `ethereum/ERCs`. The pull r
 
 | Path in the ERCs repository | Content | Files |
 | --- | --- | --- |
-| `ERCS/erc-9999.md` | The specification | 1 |
-| `assets/erc-9999/contracts/` | Reference implementation: `AITOLedger.sol`, `AITORecords.sol`, `AITOWrapper20.sol` | 3 |
-| `assets/erc-9999/contracts/interfaces/` | Types and the six interfaces | 7 |
-| `assets/erc-9999/schemas/` | JSON Schemas of the eight record kinds | 8 |
-| `assets/erc-9999/examples/` | Records of the worked cases | 13 |
-| `assets/erc-9999/vectors/` | Test vectors | 4 |
+| `ERCS/erc-8506.md` | The specification | 1 |
+| `assets/erc-8506/contracts/` | Reference implementation: `AITOLedger.sol`, `AITORecords.sol`, `AITOWrapper20.sol` | 3 |
+| `assets/erc-8506/contracts/interfaces/` | Types and the six interfaces | 7 |
+| `assets/erc-8506/schemas/` | JSON Schemas of the eight record kinds | 8 |
+| `assets/erc-8506/examples/` | Records of the worked cases | 13 |
+| `assets/erc-8506/vectors/` | Test vectors | 4 |
 
 Thirty-six files. Tests, scripts and tools stay in this repository and are not filed.
 
@@ -40,7 +40,7 @@ The script refuses to write the package when an interface quoted in the specific
     Adds a draft ERC, AI Inference Token Onchain (AITO): a framework for holding,
     transferring and consuming entitlements to AI inference supply.
 
-    - Specification: ERCS/erc-9999.md (placeholder number)
+    - Specification: ERCS/erc-9999.md (placeholder number at the time of filing)
     - Assets: interfaces and reference implementation, JSON Schemas of the record
       kinds, example records and test vectors
     - Discussion: <link of the topic>
@@ -50,15 +50,15 @@ The script refuses to write the package when an interface quoted in the specific
 
 7. **Checks.** The pull request runs the ERCs validator, the Markdown linter, the spell checker and the link checker. The specification passes the first three locally with the configuration of the ERCs repository; the link checker needs the pull request itself.
 
-## When the number is assigned
+## When the number was assigned
 
-An editor assigns the number in a review comment on the specification file.
+An editor assigns the number in a review comment on the specification file. For this proposal that happened on 2026-11-21 (ERC-8506), and the steps below were carried out once; they are kept for reference.
 
 1. Run `python3 scripts/make-filing-package.py --number <N> --discussions-to <link>`.
-2. In the pull request branch, delete `ERCS/erc-9999.md` and `assets/erc-9999/` and upload `ERCS/erc-<N>.md` and `assets/erc-<N>/` from the regenerated package.
+2. In the pull request branch, delete `ERCS/erc-8506.md` and `assets/erc-8506/` and upload `ERCS/erc-<N>.md` and `assets/erc-<N>/` from the regenerated package.
 3. Rename the discussion topic to `ERC-<N>: AI Inference Token Onchain`.
 4. When the checks are green, answer inside the editor's review conversation and resolve it.
-5. In this repository, rename `ERCS/erc-9999.md` and `assets/erc-9999/` to the assigned number and replace `erc-9999` and `eip-9999` in the paths used by `foundry.toml`, the tests, the script and the tools. Record identifiers and vectors do not depend on the number, so on-chain evidence stays valid.
+5. In this repository, rename `ERCS/erc-8506.md` and `assets/erc-8506/` to the assigned number and replace `erc-9999` and `eip-9999` in the paths used by `foundry.toml`, the tests, the script and the tools. Record identifiers and vectors do not depend on the number, so on-chain evidence stays valid.
 
 ## After the merge
 

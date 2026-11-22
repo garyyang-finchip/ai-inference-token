@@ -2,13 +2,14 @@
 # SPDX-License-Identifier: CC0-1.0
 """Checks the specification against the files it quotes and builds the ERCs filing package.
 
-    python3 scripts/make-filing-package.py                      placeholder number 9999
-    python3 scripts/make-filing-package.py --number 1234        after a number is assigned
+    python3 scripts/make-filing-package.py                      the current number, 8506
+    python3 scripts/make-filing-package.py --number N            renumber (used once, from the placeholder)
     python3 scripts/make-filing-package.py --discussions-to URL sets the discussion link
     python3 scripts/make-filing-package.py --check              checks only, writes nothing
 
 The package is written to ercs-pr-package/ and holds exactly what goes to the ERCs
-repository: ERCS/erc-<number>.md and assets/erc-<number>/.
+repository: ERCS/erc-<number>.md and assets/erc-<number>/. PLACEHOLDER names the number
+the files in this repository currently carry.
 
 Before anything is written the script verifies that
 
@@ -29,7 +30,7 @@ import shutil
 import sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-PLACEHOLDER = "9999"
+PLACEHOLDER = "8506"
 SPEC = ROOT / "ERCS" / f"erc-{PLACEHOLDER}.md"
 ASSETS = ROOT / "assets" / f"erc-{PLACEHOLDER}"
 DISCUSSION = re.compile(r"^https://ethereum-magicians\.org/t/[^/\s]+/[0-9]+$")
@@ -150,7 +151,7 @@ def renumber(data, number, suffix):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
-    parser.add_argument("--number", default=PLACEHOLDER, help="assigned ERC number (default: the placeholder)")
+    parser.add_argument("--number", default=PLACEHOLDER, help="ERC number to write (default: the current number)")
     parser.add_argument("--discussions-to", help="link to the discussion topic")
     parser.add_argument("--out", default=str(ROOT / "ercs-pr-package"), help="output directory")
     parser.add_argument("--check", action="store_true", help="check only")

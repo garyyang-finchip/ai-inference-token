@@ -4,9 +4,9 @@ pragma solidity ^0.8.24;
 import {Script} from "forge-std/Script.sol";
 import {console2} from "forge-std/console2.sol";
 
-import {AITORecords} from "../assets/erc-9999/contracts/AITORecords.sol";
-import {AITOLedger} from "../assets/erc-9999/contracts/AITOLedger.sol";
-import {AITOWrapper20} from "../assets/erc-9999/contracts/AITOWrapper20.sol";
+import {AITORecords} from "../assets/erc-8506/contracts/AITORecords.sol";
+import {AITOLedger} from "../assets/erc-8506/contracts/AITOLedger.sol";
+import {AITOWrapper20} from "../assets/erc-8506/contracts/AITOWrapper20.sol";
 import {
     SeriesTerms,
     SeriesExtension,
@@ -17,7 +17,7 @@ import {
     RecordKind,
     Outcome,
     AcceptanceRule
-} from "../assets/erc-9999/contracts/interfaces/AITOTypes.sol";
+} from "../assets/erc-8506/contracts/interfaces/AITOTypes.sol";
 
 /// @notice Runs the two worked cases of the specification on a live network and records what
 /// happened. Driven by scripts/evidence-run.sh, one phase per invocation:

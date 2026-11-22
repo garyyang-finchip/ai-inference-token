@@ -3,13 +3,13 @@ pragma solidity ^0.8.24;
 
 import {Test} from "forge-std/Test.sol";
 
-import {AITOLedger} from "../assets/erc-9999/contracts/AITOLedger.sol";
-import {IAITORecords} from "../assets/erc-9999/contracts/interfaces/IAITORecords.sol";
-import {IAITOInstrument} from "../assets/erc-9999/contracts/interfaces/IAITOInstrument.sol";
-import {IAITOConsumption} from "../assets/erc-9999/contracts/interfaces/IAITOConsumption.sol";
-import {IAITOBinding} from "../assets/erc-9999/contracts/interfaces/IAITOBinding.sol";
-import {IAITOWrapper20} from "../assets/erc-9999/contracts/interfaces/IAITOWrapper20.sol";
-import {IAITOPeriodic} from "../assets/erc-9999/contracts/interfaces/IAITOPeriodic.sol";
+import {AITOLedger} from "../assets/erc-8506/contracts/AITOLedger.sol";
+import {IAITORecords} from "../assets/erc-8506/contracts/interfaces/IAITORecords.sol";
+import {IAITOInstrument} from "../assets/erc-8506/contracts/interfaces/IAITOInstrument.sol";
+import {IAITOConsumption} from "../assets/erc-8506/contracts/interfaces/IAITOConsumption.sol";
+import {IAITOBinding} from "../assets/erc-8506/contracts/interfaces/IAITOBinding.sol";
+import {IAITOWrapper20} from "../assets/erc-8506/contracts/interfaces/IAITOWrapper20.sol";
+import {IAITOPeriodic} from "../assets/erc-8506/contracts/interfaces/IAITOPeriodic.sol";
 import {
     SeriesTerms,
     SeriesExtension,
@@ -19,13 +19,13 @@ import {
     RequestState,
     Outcome,
     AcceptanceRule
-} from "../assets/erc-9999/contracts/interfaces/AITOTypes.sol";
+} from "../assets/erc-8506/contracts/interfaces/AITOTypes.sol";
 
 /// @notice Compares the contracts with vectors produced by tools/aito.mjs, an independent
 /// implementation of the identifier, encoding and typed-data rules. Signatures in the vectors
 /// were made outside Solidity and are replayed here against the ledger.
 contract AITOVectorsTest is Test {
-    string internal constant DIR = "assets/erc-9999/vectors/";
+    string internal constant DIR = "assets/erc-8506/vectors/";
 
     AITOLedger internal ledger;
     string internal seriesJson;

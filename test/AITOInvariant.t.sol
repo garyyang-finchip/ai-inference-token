@@ -5,8 +5,8 @@ import {Test} from "forge-std/Test.sol";
 import {console2} from "forge-std/console2.sol";
 
 import {AITOBase} from "./AITOBase.sol";
-import {AITOLedger} from "../assets/erc-9999/contracts/AITOLedger.sol";
-import {AITOWrapper20} from "../assets/erc-9999/contracts/AITOWrapper20.sol";
+import {AITOLedger} from "../assets/erc-8506/contracts/AITOLedger.sol";
+import {AITOWrapper20} from "../assets/erc-8506/contracts/AITOWrapper20.sol";
 import {
     SeriesTerms,
     Authorization,
@@ -14,7 +14,7 @@ import {
     RequestRecord,
     RequestState,
     Outcome
-} from "../assets/erc-9999/contracts/interfaces/AITOTypes.sol";
+} from "../assets/erc-8506/contracts/interfaces/AITOTypes.sol";
 
 /// @dev Drives the ledger and the wrapper through random sequences of legal and illegal calls.
 contract AITOHandler is Test {

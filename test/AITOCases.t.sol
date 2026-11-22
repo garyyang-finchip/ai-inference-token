@@ -2,10 +2,10 @@
 pragma solidity ^0.8.24;
 
 import {AITOBase} from "./AITOBase.sol";
-import {AITOLedger} from "../assets/erc-9999/contracts/AITOLedger.sol";
-import {AITOWrapper20} from "../assets/erc-9999/contracts/AITOWrapper20.sol";
-import {IAITOBinding} from "../assets/erc-9999/contracts/interfaces/IAITOBinding.sol";
-import {IAITOInstrument} from "../assets/erc-9999/contracts/interfaces/IAITOInstrument.sol";
+import {AITOLedger} from "../assets/erc-8506/contracts/AITOLedger.sol";
+import {AITOWrapper20} from "../assets/erc-8506/contracts/AITOWrapper20.sol";
+import {IAITOBinding} from "../assets/erc-8506/contracts/interfaces/IAITOBinding.sol";
+import {IAITOInstrument} from "../assets/erc-8506/contracts/interfaces/IAITOInstrument.sol";
 import {
     SeriesTerms,
     SeriesExtension,
@@ -18,7 +18,7 @@ import {
     AcceptanceRule,
     BindingType,
     ConsumptionPath
-} from "../assets/erc-9999/contracts/interfaces/AITOTypes.sol";
+} from "../assets/erc-8506/contracts/interfaces/AITOTypes.sol";
 
 /// @notice The worked cases of the specification, with the same numbers.
 contract AITOCasesTest is AITOBase {

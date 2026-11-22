@@ -2,7 +2,7 @@
 
 Category: ERCs
 
-Posted as topic 30453: https://ethereum-magicians.org/t/draft-erc-ai-inference-token-onchain-aito-consumable-entitlements-to-ai-inference-supply-with-metering-authorized-consumption-and-settlement/30453
+Posted as topic 30453 (the link below is the current one; the original slug still redirects): https://ethereum-magicians.org/t/erc-8506-ai-inference-token-onchain-aito/30453
 
 Title:
 
@@ -10,7 +10,11 @@ Title:
 Draft ERC: AI Inference Token Onchain (AITO) - consumable entitlements to AI inference supply, with metering, authorized consumption and settlement
 ```
 
-When the number is assigned the title becomes `ERC-<N>: AI Inference Token Onchain`.
+Retitled on 2026-11-21, after the number was assigned, to:
+
+```text
+ERC-8506: AI Inference Token Onchain (AITO)
+```
 
 Body, everything below the line:
 

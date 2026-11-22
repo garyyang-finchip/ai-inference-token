@@ -4,9 +4,9 @@ pragma solidity ^0.8.24;
 import {Test} from "forge-std/Test.sol";
 import {IERC165} from "@openzeppelin/contracts/utils/introspection/IERC165.sol";
 
-import {AITORecords} from "../assets/erc-9999/contracts/AITORecords.sol";
-import {IAITORecords} from "../assets/erc-9999/contracts/interfaces/IAITORecords.sol";
-import {RecordKind} from "../assets/erc-9999/contracts/interfaces/AITOTypes.sol";
+import {AITORecords} from "../assets/erc-8506/contracts/AITORecords.sol";
+import {IAITORecords} from "../assets/erc-8506/contracts/interfaces/IAITORecords.sol";
+import {RecordKind} from "../assets/erc-8506/contracts/interfaces/AITOTypes.sol";
 
 contract AITORecordsTest is Test {
     AITORecords internal records;
