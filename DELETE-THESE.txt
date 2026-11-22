@@ -1,7 +1,0 @@
-Do not upload this file. It lists what to delete in the repository (renumbering 9999 -> 8506),
-after uploading the other files of this delta:
-
-  ERCS/erc-9999.md
-  assets/erc-9999/            (whole folder, 35 files)
-  ercs-pr-package/ERCS/erc-9999.md
-  ercs-pr-package/assets/erc-9999/   (whole folder, 35 files)
