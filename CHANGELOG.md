@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.3.1 (2026-11-26)
+
+- ERC-8506 merged into ethereum/ERCs as a Draft on 2026-11-25 (pull request #2188, commit 5c77458); the merged files are byte-identical to `ercs-pr-package/`. README points at the official page https://eips.ethereum.org/EIPS/eip-8506.
+- `docs/filing-runbook.md`: the renumbering steps now name the placeholder files correctly, and a section describes update pull requests after the merge.
+
 ## 0.3.0 (2026-11-22)
 
 - Number assigned: ERC-8506. `ERCS/erc-9999.md` becomes `ERCS/erc-8506.md`, `assets/erc-9999/` becomes `assets/erc-8506/`, and every path that referred to them follows (specification links, schema identifiers, tests, scripts, tools, README, runbooks). Record identifiers, series identifiers and vectors are unchanged, so the Sepolia evidence stays valid.

@@ -52,14 +52,24 @@ The script refuses to write the package when an interface quoted in the specific
 
 ## When the number was assigned
 
-An editor assigns the number in a review comment on the specification file. For this proposal that happened on 2026-11-21 (ERC-8506), and the steps below were carried out once; they are kept for reference.
+An editor assigns the number in a review comment on the specification file. For this proposal that happened on 2026-11-21: ERC-8506. The steps below were carried out once on 2026-11-22 and are kept for reference; `<N>` was 8506 and the placeholder was 9999.
 
 1. Run `python3 scripts/make-filing-package.py --number <N> --discussions-to <link>`.
-2. In the pull request branch, delete `ERCS/erc-8506.md` and `assets/erc-8506/` and upload `ERCS/erc-<N>.md` and `assets/erc-<N>/` from the regenerated package.
-3. Rename the discussion topic to `ERC-<N>: AI Inference Token Onchain`.
-4. When the checks are green, answer inside the editor's review conversation and resolve it.
-5. In this repository, rename `ERCS/erc-8506.md` and `assets/erc-8506/` to the assigned number and replace `erc-9999` and `eip-9999` in the paths used by `foundry.toml`, the tests, the script and the tools. Record identifiers and vectors do not depend on the number, so on-chain evidence stays valid.
+2. In the pull request branch, delete `ERCS/erc-9999.md` and `assets/erc-9999/` and upload `ERCS/erc-<N>.md` and `assets/erc-<N>/` from the regenerated package.
+3. Rename the discussion topic to `ERC-<N>: AI Inference Token Onchain (AITO)` and point `discussions-to` at the retitled link.
+4. When the checks are green, answer inside the editor's review conversation and resolve it. Leave the pull request title as `Add ERC: <title>`; the review bot sets that form itself when it merges.
+5. In this repository, rename `ERCS/erc-9999.md` and `assets/erc-9999/` to the assigned number and replace `erc-9999` and `eip-9999` in the paths used by `foundry.toml`, the tests, the script, the tools and the schema identifiers. Record identifiers and vectors do not depend on the number, so on-chain evidence stays valid.
+
+A new ERC file is merged only after one approving review from an ERC editor; the review bot requests it and merges automatically once it is given and the checks pass.
 
 ## After the merge
 
-The specification is then a Draft in the ERCs repository. Later changes are filed as pull requests titled `Update ERC-<N>: <what changes>` from the same fork.
+ERC-8506 was merged into ethereum/ERCs as a Draft on 2026-11-25 (commit 5c77458, pull request #2188). The official page is https://eips.ethereum.org/EIPS/eip-8506. The branch `add-erc-ai-token` is no longer needed and may be deleted; the fork stays for later changes.
+
+Later changes to the specification or its assets go through an update pull request:
+
+1. Open `ERCS/erc-8506.md` in ethereum/ERCs and use the edit button (or upload files from the same place). GitHub puts the change on a new branch of the fork cut from the current upstream master; name it, for example, `update-erc-8506-rev2`. Do not reuse `add-erc-ai-token`, and do not branch from the fork's own master.
+2. Change only `ERCS/erc-8506.md` and files under `assets/erc-8506/`. In the preamble, leave `eip`, `title`, `author`, `status`, `type`, `category`, `created` and `requires` as they are unless the change is about one of them.
+3. Title the pull request `Update ERC-8506: <what changes>`. In the description, list the sections that change, whether any interface identifier changes, the test count, and whether the Sepolia evidence was rerun.
+4. A change to a Draft by its author is approved by the review bot on the author's behalf and merged once the checks pass; no editor review is needed. A status change (to Review, Last Call or Final) is a separate pull request and needs an editor.
+5. Mirror the same change into this repository (the specification, the assets, `ercs-pr-package/` via `python3 scripts/make-filing-package.py`) and note it in `CHANGELOG.md`, then mention the update pull request in the discussion topic.

@@ -8,9 +8,9 @@ AITO fixes no price, no conversion rate between suppliers and no ranking of qual
 
 | | |
 | --- | --- |
-| Status | ERC-8506, Draft; repository version 0.3.0 |
-| Specification | [ERCS/erc-8506.md](ERCS/erc-8506.md); once merged, https://eips.ethereum.org/EIPS/eip-8506 |
-| Pull request | [ethereum/ERCs#2188](https://github.com/ethereum/ERCs/pull/2188) |
+| Status | ERC-8506, Draft, merged into ethereum/ERCs on 2026-11-25 (commit 5c77458); repository version 0.3.1 |
+| Specification | https://eips.ethereum.org/EIPS/eip-8506 (official page); source copy in this repository: [ERCS/erc-8506.md](ERCS/erc-8506.md) |
+| Pull request | [ethereum/ERCs#2188](https://github.com/ethereum/ERCs/pull/2188), merged as Draft on 2026-11-25 |
 | Discussion | [Ethereum Magicians topic 30453](https://ethereum-magicians.org/t/erc-8506-ai-inference-token-onchain-aito/30453) |
 | Requires | ERC-20, ERC-165, EIP-712, ERC-1155, ERC-1271 |
 | Author | Gary Yang ([@garyyang-finchip](https://github.com/garyyang-finchip)) |
@@ -129,7 +129,8 @@ The plan of the run, with its accounts, records and series, is in [deployments/s
 ## Links
 
 - Discussion: https://ethereum-magicians.org/t/erc-8506-ai-inference-token-onchain-aito/30453
-- ERCs pull request: https://github.com/ethereum/ERCs/pull/2188
+- ERC page: https://eips.ethereum.org/EIPS/eip-8506
+- ERCs pull request: https://github.com/ethereum/ERCs/pull/2188 (merged 2026-11-25)
 
 ## License
 

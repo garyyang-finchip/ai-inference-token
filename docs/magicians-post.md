@@ -16,7 +16,7 @@ Retitled on 2026-11-21, after the number was assigned, to:
 ERC-8506: AI Inference Token Onchain (AITO)
 ```
 
-Body, everything below the line:
+Body, everything below the line (as edited on 2026-11-26, after the merge):
 
 ---
 
@@ -73,7 +73,9 @@ Sepolia deployment, 2026-11-20, with both worked cases executed (33 transactions
 - AITOWrapper20 (Case A): https://eth-sepolia.blockscout.com/address/0xb3428103825aDDE885036ab01c84a85E9a4bAE01
 - Transactions and read-back state: https://github.com/garyyang-finchip/ai-inference-token/blob/main/docs/sepolia-evidence.md
 
-Pull request: https://github.com/ethereum/ERCs/pull/2188
+ERC-8506 (Draft): https://eips.ethereum.org/EIPS/eip-8506
+
+Pull request: https://github.com/ethereum/ERCs/pull/2188 (merged 2026-11-25; later revisions come as "Update ERC-8506" pull requests)
 
 ## Questions I would like feedback on
 
