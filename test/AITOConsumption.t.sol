@@ -674,6 +674,87 @@ contract AITOConsumptionTest is AITOBase {
         ledger.release(key);
     }
 
+    // ---------------------------------------------------------------- release horizon (section 5.5)
+
+    function _holdAt(Authorization memory a, bytes32 requestId, uint256 maxAmount, uint64 holdUntil)
+        internal
+        returns (bytes32 requestKey)
+    {
+        ConsumptionRequest memory r = _request(a, requestId, supplier, maxAmount);
+        r.holdUntil = holdUntil;
+        bytes memory holderSig = _sig(HOLDER_PK, r.authorizationId);
+        bytes memory consumerSig = _sig(CONSUMER_PK, ledger.hashRequest(r));
+        vm.prank(supplier);
+        requestKey = ledger.hold(a, holderSig, r, consumerSig);
+    }
+
+    /// A claim made at `holdUntil`, objected to at the end of the objection window and left undecided keeps
+    /// the units held until `holdUntil + objectionWindow + resolutionWindow`, which is at most
+    /// `maxHoldDuration + objectionWindow + resolutionWindow` after the hold. After that anyone may release.
+    function test_releaseHorizon_optimisticWithResolverIsHoldPlusBothWindows() public {
+        SeriesTerms memory t = _textTerms(supplier);
+        t.resolver = resolver;
+        t.resolutionWindow = 1 days;
+        uint256 id = _seriesWith(t, holder, 100_000);
+        Authorization memory a = _authorization(holder, consumer, id, 50_000);
+
+        // vm.getBlockTimestamp: block.timestamp read into a local may be re-read after vm.warp under via-IR.
+        uint256 heldAt = vm.getBlockTimestamp();
+        uint64 holdUntil = uint64(heldAt + t.maxHoldDuration);
+        bytes32 key = _holdAt(a, R1, 3_000, holdUntil);
+
+        vm.warp(holdUntil);
+        vm.prank(supplier);
+        ledger.claimUsage(key, _usage3(2_000, 1_400, 0), Outcome.Completed, bytes32(0));
+        assertEq(ledger.requestOf(key).claimedAt, holdUntil, "a claim at holdUntil is accepted");
+
+        vm.warp(uint256(holdUntil) + t.objectionWindow);
+        vm.prank(holder);
+        ledger.object(key, "metering");
+        assertEq(ledger.requestOf(key).disputedAt, uint256(holdUntil) + t.objectionWindow);
+
+        uint256 horizon = uint256(holdUntil) + t.objectionWindow + t.resolutionWindow;
+        assertEq(horizon, heldAt + t.maxHoldDuration + t.objectionWindow + t.resolutionWindow);
+
+        vm.warp(horizon);
+        vm.prank(outsider);
+        vm.expectRevert(AITOLedger.NotReleasable.selector);
+        ledger.release(key);
+        assertEq(ledger.heldOf(id), 3_000, "held until the release horizon");
+
+        vm.warp(horizon + 1);
+        vm.prank(outsider);
+        ledger.release(key);
+        assertEq(uint8(ledger.requestOf(key).state), uint8(RequestState.Released));
+        assertEq(ledger.availableOf(id, holder), 100_000);
+        _assertAccounting(id, _accounts());
+    }
+
+    /// Without a resolver the horizon is `holdUntil + objectionWindow`, and the holder can end the request
+    /// itself by finalizing the claim; it does not depend on the fulfiller.
+    function test_releaseHorizon_holderFinalizesAfterTheObjectionWindow() public {
+        Authorization memory a = _authorization(holder, consumer, seriesId, 50_000);
+        uint64 holdUntil = uint64(vm.getBlockTimestamp() + 900);
+        bytes32 key = _holdAt(a, R1, 3_000, holdUntil);
+
+        vm.warp(holdUntil);
+        vm.prank(supplier);
+        ledger.claimUsage(key, _usage3(2_000, 1_400, 0), Outcome.Completed, bytes32(0));
+
+        vm.warp(uint256(holdUntil) + 600);
+        vm.prank(holder);
+        vm.expectRevert(AITOLedger.ObjectionWindowOpen.selector);
+        ledger.finalize(key);
+
+        vm.warp(uint256(holdUntil) + 601);
+        vm.prank(holder);
+        ledger.finalize(key);
+        assertEq(uint8(ledger.requestOf(key).state), uint8(RequestState.Settled));
+        assertEq(ledger.requestOf(key).deducted, 1_900);
+        assertEq(ledger.availableOf(seriesId, holder), 98_100);
+        _assertAccounting(seriesId, _accounts());
+    }
+
     // ---------------------------------------------------------------- one effect per logical request
 
     function test_settledRequestHasNoSecondEffect() public {

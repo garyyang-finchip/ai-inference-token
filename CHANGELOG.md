@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.4.0 (2026-11-27)
+
+Specification revision 2, after posts #5, #9 and #10 of the discussion topic. No interface, contract, record or vector change; the Sepolia deployment stays valid.
+
+- Section 5.4: an acceptance extension adds conditions and does not replace the series' acceptance rule, which applies when the extension's conditions are not met; it never raises a deduction above the claimed amount of section 5.3 and may lower it; it may define the structure of the evidence commitment and names the parties it relies on in its parameters; an extension that changes when a request can end states the resulting release horizon.
+- Section 5.5: the three deadlines of a request (claim, acceptance, resolution), the release horizon (`holdUntil`, plus `objectionWindow` under optimistic acceptance, plus `resolutionWindow` with a resolver; at most `maxHoldDuration + objectionWindow + resolutionWindow` after the hold), and a recommendation that signing interfaces show it, including when it passes `validUntil`.
+- Security Considerations: the paragraph on holds now separates the amount at stake from the time units can stay held.
+- Rationale: why acceptance extensions add conditions and leave the base rule in place.
+- Case B: how an acceptance extension with observer statements and a Method could strengthen its evidence.
+- Two tests of the release horizon (100 tests in total): a claim at `holdUntil` that is disputed and left undecided can be released by anyone only after `holdUntil + objectionWindow + resolutionWindow`; without a resolver the holder finalizes after the objection window.
+
 ## 0.3.1 (2026-11-26)
 
 - ERC-8506 merged into ethereum/ERCs as a Draft on 2026-11-25 (pull request #2188, commit 5c77458); the merged files are byte-identical to `ercs-pr-package/`. README points at the official page https://eips.ethereum.org/EIPS/eip-8506.

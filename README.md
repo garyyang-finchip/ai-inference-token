@@ -8,7 +8,7 @@ AITO fixes no price, no conversion rate between suppliers and no ranking of qual
 
 | | |
 | --- | --- |
-| Status | ERC-8506, Draft, merged into ethereum/ERCs on 2026-11-25 (commit 5c77458); repository version 0.3.1 |
+| Status | ERC-8506, Draft, merged into ethereum/ERCs on 2026-11-25 (commit 5c77458); specification revision 2 in this repository, submitted as an update pull request; repository version 0.4.0 |
 | Specification | https://eips.ethereum.org/EIPS/eip-8506 (official page); source copy in this repository: [ERCS/erc-8506.md](ERCS/erc-8506.md) |
 | Pull request | [ethereum/ERCs#2188](https://github.com/ethereum/ERCs/pull/2188), merged as Draft on 2026-11-25 |
 | Discussion | [Ethereum Magicians topic 30453](https://ethereum-magicians.org/t/erc-8506-ai-inference-token-onchain-aito/30453) |
@@ -64,7 +64,7 @@ Requires [Foundry](https://github.com/foundry-rs/foundry) (tested with 1.7.1), N
 
 ```sh
 bash scripts/setup.sh          # fetches forge-std and OpenZeppelin Contracts into lib/
-forge test                     # 98 tests: unit, worked cases, fuzz, invariants, vectors
+forge test                     # 100 tests: unit, worked cases, fuzz, invariants, vectors
 cd tools && npm install && node aito.mjs check && cd ..
 python3 tools/profile_examples.py
 ```

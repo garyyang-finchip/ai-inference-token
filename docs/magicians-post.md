@@ -62,7 +62,7 @@ Repository:
 https://github.com/garyyang-finchip/ai-inference-token
 
 - `AITOLedger` (core and native ERC-1155 binding), `AITOWrapper20` and `AITORecords`, with no owner, no upgrade path and no privileged account.
-- 98 Foundry tests: unit tests, two worked cases end to end, fuzz tests and invariant tests.
+- 100 Foundry tests: unit tests, two worked cases end to end, fuzz tests and invariant tests.
 - JSON Schemas for the eight record kinds, example records, and vectors produced by a second implementation outside Solidity and replayed against the contracts.
 - The two optional profiles are specified only. The reference ledger does not implement them and does not report them.
 
